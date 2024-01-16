@@ -25,6 +25,20 @@ const imageData = ()=>{
 
 function App() {
   // code here
+  const imgData = imageData();
+  return (
+    <div>
+      <h1>Kalvium gallary</h1>
+      {
+       imgData.map((image) => {
+        return(
+          <div className="grid"key={image.id}>
+            <img src={image.img} alt="img"/>
+          </div>
+        ) 
+        })}
+     </div>
+  )
 }
 
 export default App;
